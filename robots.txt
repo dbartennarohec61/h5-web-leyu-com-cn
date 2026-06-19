@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dbartennarohec61.github.io/h5-web-leyu-com-cn/sitemap.xml
