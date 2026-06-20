@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信息卡片：1xbet 平台资料整理</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #faf7f2;
+            font-family: 'Georgia', 'Times New Roman', '宋体', 'Noto Serif SC', serif;
+            color: #2b2b2b;
+            line-height: 1.8;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+            padding: 2.5rem 2rem;
+        }
+
+        @media (max-width: 540px) {
+            body { padding: 0.8rem; }
+            .container { padding: 1.8rem 1.2rem; }
+        }
+
+        /* 主视觉 —— 卡片式引言 */
+        .hero-card {
+            background: #fffbf5;
+            border: 1px solid #e5dcd0;
+            border-radius: 20px;
+            padding: 2rem 1.8rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .hero-card h1 {
+            font-size: 2rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: #3a3128;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero-card p {
+            font-size: 1rem;
+            color: #4f463b;
+        }
+
+        .hero-card .decorative-line {
+            width: 50px;
+            height: 2px;
+            background: #b7a58c;
+            margin: 1rem 0 1.2rem 0;
+        }
+
+        /* 通用标题 */
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 400;
+            border-left: 4px solid #b7a58c;
+            padding-left: 0.9rem;
+            margin: 2.4rem 0 1rem 0;
+            color: #382f26;
+        }
+
+        /* 用途卡片组 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.2rem;
+            margin: 1.2rem 0 2rem 0;
+        }
+
+        .use-card {
+            background: #faf5ee;
+            border-radius: 16px;
+            padding: 1.2rem 1rem;
+            border: 1px solid #ece2d6;
+        }
+
+        .use-card .card-icon {
+            font-size: 1.6rem;
+            line-height: 1;
+            margin-bottom: 0.4rem;
+        }
+
+        .use-card h3 {
+            font-size: 1rem;
+            font-weight: 500;
+            margin: 0.3rem 0 0.2rem 0;
+            color: #3a3026;
+        }
+
+        .use-card p {
+            font-size: 0.9rem;
+            color: #5f5548;
+        }
+
+        /* 适合人群 —— 列表式卡片 */
+        .audience-list {
+            background: #f8f3ec;
+            border-radius: 18px;
+            padding: 1.6rem 1.8rem;
+            margin: 1rem 0 2rem 0;
+            list-style: none;
+        }
+
+        .audience-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed #ddd3c5;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+        }
+
+        .audience-list li:last-child {
+            border-bottom: none;
+        }
+
+        .audience-list .bullet {
+            color: #b7a58c;
+            font-weight: 400;
+            font-size: 1.1rem;
+        }
+
+        /* 引用块 / 提示框 */
+        .info-block {
+            background: #f0ebe2;
+            border-left: 6px solid #9c8a74;
+            padding: 1.2rem 1.5rem;
+            border-radius: 0 14px 14px 0;
+            margin: 1.6rem 0;
+            font-size: 0.95rem;
+            color: #3a342c;
+        }
+
+        .info-block strong {
+            font-weight: 600;
+            color: #2b241c;
+        }
+
+        .info-block a {
+            color: #7b5f3f;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            text-decoration-color: #cbb79e;
+        }
+
+        .info-block a:hover {
+            color: #4d3823;
+            text-decoration-color: #7b5f3f;
+        }
+
+        /* 自然链接段落 */
+        .link-sentence {
+            background: #ffffff;
+            border: 1px solid #e2d8cb;
+            border-radius: 20px;
+            padding: 1.6rem 1.8rem;
+            margin: 2rem 0 0.5rem 0;
+            line-height: 1.9;
+        }
+
+        .link-sentence a {
+            color: #6f522f;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            text-decoration-color: #d0bc9f;
+            font-weight: 400;
+        }
+
+        .link-sentence a:hover {
+            color: #3f2d19;
+            text-decoration-color: #6f522f;
+        }
+
+        /* FAQ 摘要（极简） */
+        .faq-mini {
+            margin-top: 2.2rem;
+            border-top: 1px solid #e5dcd0;
+            padding-top: 1.6rem;
+        }
+
+        .faq-item {
+            margin: 1rem 0;
+        }
+
+        .faq-item .q {
+            font-weight: 500;
+            color: #3f352b;
+            font-size: 0.95rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-item .a {
+            font-size: 0.9rem;
+            color: #5f5548;
+            padding-left: 1rem;
+            border-left: 2px solid #d9ccbb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e8dfd2;
+            margin: 1.8rem 0;
+        }
+
+        .footer-note {
+            font-size: 0.8rem;
+            color: #9b917e;
+            margin-top: 2rem;
+            text-align: right;
+            letter-spacing: 0.3px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- 主视觉卡片 -->
+    <div class="hero-card">
+        <h1>信息卡片 · 1xbet</h1>
+        <div class="decorative-line"></div>
+        <p>一份从资料整理视角展开的笔记：关于功能边界、使用场景，以及常见理解上的索引。不追求夸张，只求清晰。”</p>
+    </div>
+
+    <!-- 用途卡片 -->
+    <div class="section-title">用途卡片 · 几个常见的切入角度</div>
+    <div class="card-grid">
+        <div class="use-card">
+            <div class="card-icon">📋</div>
+            <h3>信息阅览</h3>
+            <p>作为内容聚合界面，浏览各项更新与通知，保持对动态的感知。</p>
+        </div>
+        <div class="use-card">
+            <div class="card-icon">🔍</div>
+            <h3>资料对比</h3>
+            <p>查阅不同分类下的条目，便于在信息间建立自己的参照系。</p>
+        </div>
+        <div class="use-card">
+            <div class="card-icon">🧩</div>
+            <h3>模块索引</h3>
+            <p>快速定位到感兴趣的板块，减少漫无目的的翻找时间。</p>
+        </div>
+    </div>
+
+    <!-- 适合人群列表 -->
+    <div class="section-title">适合人群 · 谁可能觉得这套卡片有用</div>
+    <ul class="audience-list">
+        <li><span class="bullet">▪</span> 习惯先整理资料再判断的人——喜欢先看结构，再做选择。</li>
+        <li><span class="bullet">▪</span> 偶尔需要快速检索某类信息的使用者——不追求沉浸，追求效率。</li>
+        <li><span class="bullet">▪</span> 对平台功能有基础认知，但希望获得更清晰分类的读者。</li>
+        <li><span class="bullet">▪</span> 偏向于安静、克制的界面风格，不喜欢过度渲染的访问者。</li>
+    </ul>
+
+    <!-- 引用块 / 提示框 -->
+    <div class="info-block">
+        <strong>提示：</strong> 任何平台的信息展示方式都会随着版本迭代而调整。本文卡片结构基于某一阶段的观察整理，可作为参考框架，但具体的条目与分类仍建议以实际界面为准。保持开放，保持核对。
+    </div>
+
+    <!-- 自然链接段落 -->
+    <div class="link-sentence">
+        如果你恰好也在整理关于某类平台的笔记，或许可以看一看 <a href="https://m-web-1xbet.com">1xbet</a> 的移动端页面结构——它的卡片布局和分类逻辑本身就带有一定的索引意味，可以作为资料收集时的一个对照样本。
+    </div>
+
+    <!-- 第二个自然段（再次使用链接，但不同句子结构） -->
+    <div class="link-sentence" style="margin-top: 0.8rem;">
+        在翻阅许多同类界面后，我发现 <a href="https://m-web-1xbet.com">1xbet</a> 的入口设计并没有复杂的装饰，而是把重心放在模块区分上。这种减法式的思路，恰好符合“信息整理者”对简洁目录的期待。
+    </div>
+
+    <!-- FAQ 摘要（以极简卡片呈现） -->
+    <div class="faq-mini">
+        <div class="section-title" style="margin-top: 0;">FAQ 摘要 · 三个常见疑问</div>
+        <div class="faq-item">
+            <div class="q">Q：这些卡片是官方分类吗？</div>
+            <div class="a">不完全是。这是基于公开界面所做的信息再组织，目的是便于个人理解，与官方分类可能存在差异。</div>
+        </div>
+        <div class="faq-item">
+            <div class="q">Q：页面会随时间变化吗？</div>
+            <div class="a">会的。本文反映的是某一时刻的观察，实际内容可能更新。建议定期核对，保持资料新鲜。</div>
+        </div>
+        <div class="faq-item">
+            <div class="q">Q：适合完全没有接触过的人吗？</div>
+            <div class="a">更适合有一定基础、希望整理自己认知框架的人。如果完全是第一次接触，建议先熟悉基础界面再回看这些卡片。</div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="footer-note">资料卡片 · 方向：索引与整理</div>
+
+</div>
+</body>
+</html>
